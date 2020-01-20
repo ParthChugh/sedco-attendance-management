@@ -11,7 +11,7 @@
   },
   "lint-staged": {
     "*.jsx": [
-      "client/node_modules/.bin/eslint --fix --config client/.eslintrc",
+      "client/node_modules/.bin/eslint --fix --config .eslintrc",
       "git add"
     ],
     "*.rb": [
