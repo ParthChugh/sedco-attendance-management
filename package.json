@@ -2,10 +2,12 @@
   "name": "rails_react_js_ssr_setup",
   "private": true,
   "scripts": {
-    "check-linting": "(cd client && npm run lint)",
-    "fix-linting": "(cd client && npm run lint-fix)",
-    "precommit": "lint-staged",
-    "start:server": "RAILS_ENV=test bundle exec rails s -p 3000 -b 0.0.0.0"
+    "lint-hook": "eslint -f table --ext .js --ext .jsx app/",
+    "lint-fix-hook": "eslint -f table --ext .js --ext .jsx --fix app/",
+    "lint": "npm run lint-hook --silent || true",
+    "lint-fix": "npm run lint-fix-hook --silent || true",
+    "lint:folder": "eslint -f table --ext .js --ext .jsx $base_folder",
+    "lint-fix:folder": "eslint -f table --ext .js --ext .jsx --fix $base_folder"
   },
   "lint-staged": {
     "*.jsx": [
@@ -35,8 +37,12 @@
   },
   "version": "0.1.0",
   "devDependencies": {
+    "babel-eslint": "^10.0.3",
     "eslint": "^6.8.0",
-    "webpack-dev-server": "^3.9.0",
-    "eslint-plugin-react": "^7.18.0"
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.20.0",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-react": "^7.18.0",
+    "webpack-dev-server": "^3.9.0"
   }
 }
