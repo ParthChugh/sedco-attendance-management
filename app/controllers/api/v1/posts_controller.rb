@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # app/controllers/api/v1/posts_controller.rb
 class Api::V1::PostsController < ApplicationController
   def index
