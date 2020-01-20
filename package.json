@@ -2,8 +2,8 @@
   "name": "rails_react_js_ssr_setup",
   "private": true,
   "scripts": {
-    "lint-hook": "eslint -f table --ext .js --ext .jsx app/",
-    "lint-fix-hook": "eslint -f table --ext .js --ext .jsx --fix app/",
+    "lint-hook": "eslint -f table --ext .js --ext .jsx app/javacript",
+    "lint-fix-hook": "eslint -f table --ext .js --ext .jsx --fix app/javacript",
     "lint": "npm run lint-hook --silent || true",
     "lint-fix": "npm run lint-fix-hook --silent || true",
     "lint:folder": "eslint -f table --ext .js --ext .jsx $base_folder",
