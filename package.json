@@ -2,8 +2,8 @@
   "name": "rails_react_js_ssr_setup",
   "private": true,
   "scripts": {
-    "lint-hook": "eslint -f table --ext .js --ext .jsx app/javacript",
-    "lint-fix-hook": "eslint -f table --ext .js --ext .jsx --fix app/javacript",
+    "lint-hook": "eslint -f table --ext .js --ext .jsx app/javascript",
+    "lint-fix-hook": "eslint -f table --ext .js --ext .jsx --fix app/javascript",
     "lint": "npm run lint-hook --silent || true",
     "lint-fix": "npm run lint-fix-hook --silent || true",
     "lint:folder": "eslint -f table --ext .js --ext .jsx $base_folder",
@@ -11,7 +11,7 @@
   },
   "lint-staged": {
     "*.jsx": [
-      "client/node_modules/.bin/eslint --fix --config app/javascript/.eslintrc",
+      "node_modules/.bin/eslint --fix --config app/javascript/.eslintrc",
       "git add"
     ],
     "*.rb": [
@@ -42,7 +42,6 @@
     }
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
     "husky": "^4.0.10",
     "webpack-dev-server": "^3.9.0"
   }
