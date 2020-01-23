@@ -21,3 +21,4 @@ SAMPLE_POSTS = [{
 SAMPLE_POSTS.each do |post|
   Post.create(post)
 end
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

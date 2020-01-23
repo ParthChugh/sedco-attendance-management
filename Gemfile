@@ -35,6 +35,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 # React Rails integration
 gem 'react_on_rails', '11.1.4'
 
+gem 'arctic_admin'
+
+gem 'activeadmin'
+
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
 end

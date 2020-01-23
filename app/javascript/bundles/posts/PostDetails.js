@@ -9,9 +9,9 @@ export default class PostDetails extends React.Component {
 
   componentDidMount() {
     const { match: { params: { id } } } = this.props;
-    fetch(`/api/v1/posts/${id}`).
-      then((response) => response.json()).
-      then((post) => this.setState({ post }));
+    // fetch(`/api/v1/posts/${id}`).
+    //   then((response) => response.json()).
+    //   then((post) => this.setState({ post }));
   }
 
   render() {

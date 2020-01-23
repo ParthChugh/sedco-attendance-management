@@ -13,17 +13,17 @@ export default class PostsList extends React.Component {
   }
 
   fetchPostsList = () => {
-    fetch('/api/v1/posts').
-      then((response) => response.json()).
-      then((posts) =>  this.setState({ posts }));
+    // fetch('/api/v1/posts').
+    //   then((response) => response.json()).
+    //   then((posts) =>  this.setState({ posts }));
   };
 
   handleDelete = (postId) => {
-    fetch(`/api/v1/posts/${postId}`, { method: 'delete' }).
-      then((response) => {
-        alert('Post deleted successfully')
-        this.fetchPostsList();
-      });
+    // fetch(`/api/v1/posts/${postId}`, { method: 'delete' }).
+    //   then((response) => {
+    //     alert('Post deleted successfully')
+    //     this.fetchPostsList();
+    //   });
   }
 
   render() {

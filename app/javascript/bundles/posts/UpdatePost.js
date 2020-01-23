@@ -13,9 +13,9 @@ export default class UpdatePost extends React.Component {
 
   componentDidMount() {
     const { match: { params: { id } } } = this.props;
-    fetch(`/api/v1/posts/${id}`).
-      then((response) => response.json()).
-      then((post) => this.setState({ ...post }));
+    // fetch(`/api/v1/posts/${id}`).
+    //   then((response) => response.json()).
+    //   then((post) => this.setState({ ...post }));
   }
 
   handleInputChange = (event) => {
@@ -23,14 +23,7 @@ export default class UpdatePost extends React.Component {
   }
 
   updatePostRequest = (event) => {
-    fetch(`/api/v1/posts/${this.state.id}`, {
-      method: 'put',
-      body: JSON.stringify(this.state),
-      headers: { 'Content-Type': 'application/json' },
-    }).then((response) => {
-      alert('Post updated successfully');
-      location.href = '/';
-    });
+    // fetch(`/api/v1/pfe
   }
 
   render() {
