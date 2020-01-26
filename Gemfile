@@ -62,6 +62,8 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'country_select', require: 'country_select_without_sort_alphabetical'
+
 gem 'rename'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

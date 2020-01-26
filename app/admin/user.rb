@@ -3,6 +3,8 @@
 ActiveAdmin.register User do
   permit_params :email,:created_at,:updated_at,:password,:password_confirmation
 
+  menu parent: "Users Management"
+  
   index do
     selectable_column
     id_column
