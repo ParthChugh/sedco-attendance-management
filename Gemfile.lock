@@ -76,8 +76,15 @@ GEM
       font-awesome-sass (~> 5.6.1)
       jquery-rails
     ast (2.4.0)
+    awesome_print (1.8.0)
+    awesome_rails_console (0.4.4)
+      awesome_print
+      pry-rails
+      railties
     bcrypt (3.1.13)
     bindex (0.8.1)
+    binding_of_caller (0.8.0)
+      debug_inspector (>= 0.0.1)
     bootsnap (1.4.5)
       msgpack (~> 1.0)
     builder (3.2.3)
@@ -91,9 +98,11 @@ GEM
       regexp_parser (~> 1.5)
       xpath (~> 3.2)
     childprocess (3.0.0)
+    coderay (1.1.2)
     concurrent-ruby (1.1.5)
     connection_pool (2.2.2)
     crass (1.0.5)
+    debug_inspector (0.0.3)
     devise (4.7.1)
       bcrypt (~> 3.0)
       orm_adapter (~> 0.1)
@@ -113,6 +122,10 @@ GEM
     has_scope (0.7.2)
       actionpack (>= 4.1)
       activesupport (>= 4.1)
+    hirb (0.7.3)
+    hirb-unicode-steakknife (0.0.9)
+      hirb (~> 0.5)
+      unicode-display_width (~> 1.1)
     i18n (1.7.0)
       concurrent-ruby (~> 1.0)
     inherited_resources (1.11.0)
@@ -169,6 +182,17 @@ GEM
     pg (1.1.4)
     polyamorous (2.3.2)
       activerecord (>= 5.2.1)
+    pry (0.12.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.9.0)
+    pry-byebug (3.8.0)
+      byebug (~> 11.0)
+      pry (~> 0.10)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
+    pry-stack_explorer (0.4.9.3)
+      binding_of_caller (>= 0.7)
+      pry (>= 0.9.11)
     public_suffix (4.0.1)
     puma (4.3.1)
       nio4r (~> 2.0)
@@ -298,14 +322,19 @@ PLATFORMS
 DEPENDENCIES
   activeadmin
   arctic_admin
+  awesome_rails_console
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 2.15)
   devise
+  hirb
+  hirb-unicode-steakknife
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
   mini_racer
   pg (>= 0.18, < 2.0)
+  pry-byebug
+  pry-stack_explorer
   puma (~> 4.3)
   rails (~> 6.0.1)
   react_on_rails (= 11.1.4)
