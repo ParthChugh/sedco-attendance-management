@@ -2,7 +2,7 @@
 
 ActiveAdmin.register City do
   permit_params :ext_id, :state_id, :name
-  menu parent: "Orgs Management"
+  menu parent: "Organisations Management"
   index do
     id_column
     column :name

@@ -3,11 +3,10 @@
 ActiveAdmin.register Org do
   permit_params :ext_id, :parent_id, :name, :address_line1, :address_line2, :city_id, :state_id, :country, :pincode, :phone
 
-  menu parent: "Orgs Management"
-  
+  menu parent: "Organisations Management"
+
   index do
-    selectable_column
-    id_column
+    selectable_column 
     column :name  
     column :state_id do |org| 
       link_to State.find(org.state_id).name, "/admin/states/#{org.state_id}"
@@ -23,7 +22,6 @@ ActiveAdmin.register Org do
     column :address_line2
     column :pincode
     column :phone
-    column :created_at
     actions
   end
 

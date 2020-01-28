@@ -3,13 +3,12 @@
 ActiveAdmin.register State do
   permit_params :ext_id, :country, :name, :state_code
 
-  menu parent: "Orgs Management"
+  menu parent: "Organisations Management"
 
   index do
     selectable_column
     id_column
     column :name
-    column :ext_id
     column :state_code
     column :country
     column :created_at
@@ -17,7 +16,6 @@ ActiveAdmin.register State do
   end
 
   filter :name
-  filter :ext_id
   filter :state_code
   filter :country
   filter :created_at
@@ -25,7 +23,6 @@ ActiveAdmin.register State do
   show do
     attributes_table do
       row :name
-      row :ext_id
       row :state_code
       row :country
       row :created_at
