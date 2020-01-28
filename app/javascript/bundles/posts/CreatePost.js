@@ -18,21 +18,21 @@ export default class CreatePost extends React.Component {
 
   createPostRequest = (event) => {
     console.log('this.state', this.state);
-    fetch('/api/v1/posts', {
-      method: 'post',
-      body: JSON.stringify(this.state),
-      headers: { 'Content-Type': 'application/json' },
-    }).then((response) => {
-      alert('Post created successfully');
-      location.href = '/';
-    });
+    // fetch('/api/v1/posts', {
+    //   method: 'post',
+    //   body: JSON.stringify(this.state),
+    //   headers: { 'Content-Type': 'application/json' },
+    // }).then((response) => {
+    //   alert('Post created successfully');
+    //   location.href = '/';
+    // });
   }
 
   render() {
     const {title, description, is_published} = this.state;
     return (
       <div>
-        <h3>New Post</h3>
+        <h3>New Posdstasasdasdass</h3>
         <div>
           <label>Title: </label>
           <input

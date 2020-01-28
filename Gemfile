@@ -21,6 +21,7 @@ gem 'rubocop', require: false
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+gem 'awesome_rails_console'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password
@@ -34,6 +35,10 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 # React Rails integration
 gem 'react_on_rails', '11.1.4'
+
+gem 'arctic_admin'
+
+gem 'activeadmin'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
@@ -57,9 +62,26 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'country_select', require: 'country_select_without_sort_alphabetical'
+
 gem 'rename'
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 
 gem 'mini_racer', platforms: :ruby
+
+# Please clean up duplicated gems if any.
+# Feel free to remove gems that you don't want to use or if they conflict with other gem dependencies. (you might need to update .pryrc also)
+
+group :development, :test do
+  gem 'hirb'
+  gem 'hirb-unicode-steakknife', require: 'hirb-unicode'
+  gem 'pry-byebug'
+  gem 'pry-stack_explorer'
+end
+
+gem 'capistrano', '~> 3.11'
+gem 'capistrano-rails', '~> 1.4'
+gem 'capistrano-passenger', '~> 0.2.0'
+gem 'capistrano-rbenv', '~> 2.1', '>= 2.1.4'

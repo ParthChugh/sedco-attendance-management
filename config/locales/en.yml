@@ -29,5 +29,11 @@
 # To learn more, please read the Rails Internationalization guide
 # available at https://guides.rubyonrails.org/i18n.html.
 
+
 en:
-  hello: "Hello world"
+  active_admin:
+    powered_by: "Powered by Sequantix"
+    dashboard: "Dashboard"
+    dashboard_welcome:
+      welcome: "This is the Administrator Login"
+      call_to_action: "Please handle it carefullly"

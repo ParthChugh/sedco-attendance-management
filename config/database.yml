@@ -80,6 +80,6 @@ test:
 #
 production:
   <<: *default
-  database: sedco-attendance-managment_production
-  username: sedco-attendance-managment
-  password: <%= ENV['SEDCO-ATTENDANCE-MANAGMENT_DATABASE_PASSWORD'] %>
+  database: sedco_attendance_managment_production
+  username: super
+  password: <%= ENV['SEDCO_ATTENDANCE_MANAGMENT_DATABASE_PASSWORD'] %>
